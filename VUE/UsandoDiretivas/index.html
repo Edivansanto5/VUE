@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usando Diretivas</title>
+    <script src="../vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <p>cruso:</p>
+        <h3>{{ads}} | Professor : {{professor}}</h3>
+        <h3>{{mat}} | Professor :{{prof}} </h3>
+        <h3>{{bio}} | Professor :{{profe}} </h3>
+        <h3>{{his}} | Professor : {{pro}}</h3>
+        <p><a  v-bind:href="link">clic aqui </a>para saber mais sobre Vue.js</p>
+        <p>Professor: {{professor}}</p>
+        <p>Professor: <span v-text="prof"></span></p>
+        <p v-text="pro">professor: </p>
+    </div>
+    <script>
+        new Vue({
+            el:'#app',
+            data:{
+                ads:'ADS',
+                mat:'Matematica',
+                bio:'Biologia',
+                his:'histórias',
+
+                professor:'marcos',
+                prof:'Antonio',
+                profe:'isabel',
+                pro:'seferrar',
+                link:'https://vuejs.org/',
+            },methods:{
+                professor:function(){
+                    return this.professor
+                }
+            }
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exibindo html puro</title>
+    <script src="../vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <p>Curso:{{curso}} || {{instrutor}}</p>
+        <p v-html='curso'><{{curso}}/p>
+    </div>
+    <script>
+        new Vue({
+            el:'#app',
+            data:{
+                curso:'curso de Vue.js <span style="color:red"> Completo </span>',
+                instrutor:'Marcos de sousa junior'
+            }
+            
+        })
+
+    </script>
+    
+</body>
+</html>

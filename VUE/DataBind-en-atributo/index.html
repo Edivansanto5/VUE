@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../vue.js"></script>
+    <title>Data Bind em  atributo </title>
+   
+</head>
+<body>
+    <div id="app">
+        <p>curso de  TI {{curso}}</p>
+        <a v-bind:href="docs"> google</a>
+        <p>Meu facebook e <a v-bind:href="docss">youtube</a></p>
+
+    </div>
+    <script>
+        new Vue({
+            el:'#app',
+            data:{
+                curso:'ADS',
+                docs:'https://www.google.com.br',
+                docss:'https://www.youtube.com',
+            }
+        })
+    </script>
+     
+</body>
+</html>
